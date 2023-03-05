@@ -2,9 +2,12 @@ const mongoose = require('mongoose')
 
 const ingredientSchema = mongoose.Schema(
     {
-        text: {
+        name: {
             type: String,
-            required: [true, 'Please add a text value!']
+            required: [true, 'Please add the ingredient name!']
+        },
+        categoryId: {
+            type: mongoose.Schema.Types.ObjectId
         },
     },
     {

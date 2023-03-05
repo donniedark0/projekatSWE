@@ -14,7 +14,11 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
+app.use('/api/categories', require('./routes/categoryRoutes'))
 app.use('/api/ingredients', require('./routes/ingredientRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
+app.use('/api/recipes', require('./routes/recipeRoutes'))
+
 
 app.use(errorHandler)
 

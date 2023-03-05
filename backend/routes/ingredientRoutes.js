@@ -1,14 +1,15 @@
 const express = require('express')
 const router = express.Router()
 const {
-    getIngredients,
+    getIngredientsByCategory,
     addIngredient,
     updateIngredient,
     deleteIngredient
 } = require('../controllers/ingredientController')
 
+const {protect} = require('../middleware/authMiddleware')
 
-router.route('/').get(getIngredients).post(addIngredient)
-router.route('/:id').delete(deleteIngredient).put(updateIngredient)
+router.route('/').post(addIngredient)
+router.route('/:id').get(getIngredientsByCategory).delete(protect, deleteIngredient).put(protect, updateIngredient)
 
 module.exports = router

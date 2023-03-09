@@ -18,4 +18,4 @@ const recipeLikesSchema = mongoose.Schema({
 
 })
 
-module.exports = mongoose.model('RecipeLikes', RecipeLikesSchema)
+module.exports = mongoose.model('RecipeLikes', recipeLikesSchema)

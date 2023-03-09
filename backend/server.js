@@ -18,6 +18,8 @@ app.use('/api/categories', require('./routes/categoryRoutes'))
 app.use('/api/ingredients', require('./routes/ingredientRoutes'))
 app.use('/api/users', require('./routes/userRoutes'))
 app.use('/api/recipes', require('./routes/recipeRoutes'))
+app.use('/api/recipeLikes', require('./routes/recipeLikesRoutes'))
+app.use('/api/comments', require('./routes/commentRoutes'))
 
 
 app.use(errorHandler)
